@@ -30,7 +30,15 @@
         text-align: center;
         color: pink;
         font-size: 40px;
-        padding-top: 500px;
+        margin-top: 500px;
+      }
+
+      #fulmicotone {
+        text-align: center;
+        position: relative;
+        top: 241px;
+        color: red;
+        font-size: 40px;
       }
     </style><!---__________END CSS__________-->
 
@@ -40,7 +48,9 @@
 
     <!--__________HTML__________-->
     <h1 id="lol">UN SITO INUTILE</h1>
+    <h3 id="fulmicotone"></h3>
     <h2 id="lallero">From Brogno with &#10084;</h2>
+
     <!--__________END HTML__________-->
 
 
@@ -49,6 +59,8 @@
 
     <!---__________JavaScript__________-->
   <script type="text/javascript">
+
+    // TEST
 
     // var dannyArr = ["Danny", "Brogno", "Buffy", "the cat", "Diego", "Alatriste", "William", "Wallace", "Cornelio", "Scipione"];
     //
@@ -65,6 +77,7 @@
     // ----------------------EXERCISE 1-----------------------------------------
 
     // Crea un array contenente 3 nomi.
+
         // Chiedi un numero da 0 a 2 all'utente e
         // stampa l'elemento dell'array
         // corrispondente
@@ -85,8 +98,6 @@
 
 
     // -------------------EXERCISE 2--------------------------------------------
-
-
 
     // var dannyArr = [ "Danny", "Brogno", "Buffy", "the cat", "Diego", "Alatriste", "William", "Wallace", "Publio", "Cornelio", "Scipione" ];
     // console.log(dannyArr, dannyArr.length);
@@ -109,7 +120,9 @@
     // ----------------------------EXERCISE 3 ----------------------------------
 
     // stampare un elemento ogni 2
+
       // var arr = [ "Danny", "Brogno", "Buffy", "the cat", "Diego", "Alatriste", "William", "Wallace", "Publio", "Cornelio", "Scipione" ];
+      // console.log(arr.length);
       // for (var i=0;i<arr.length;i++) {
       //
       // if (i % 2 == 0) {
@@ -130,6 +143,7 @@
       // ---------------------------------EXERCISE 4----------------------------
 
       // stampare tutte le parole con lunghezza pari
+
         // var dannyArr = [ 'Danny', 'Brogno', 'Buffy', 'thecat', 'Diego', 'Alatriste', "Caio", "Giulio", "Cesare" ];
         // for (var i=0;i<dannyArr.length;i++) {
         // var elem = dannyArr[i];
@@ -156,14 +170,51 @@
         // ESERCIZIO UFFICIALE DEL 04/03/2021
 
         // 1 - Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato
-        // 2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il compute. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 
-         var emailUser = prompt("Scivi qui la tua email, grazie.");
-         var dannyArr = [ "" ];
-         console.log(emailUser);
-         document.getElementById('lol').innerHTML = emailUser;
+         // var emailUser = prompt("Write here your email.");
+         // var dannyArr = [ "ciao@gmail.com", "lol@gmail.com", "lallero@gmail.com", "buffy@gmail.com" ];
+         // var access = false;
+         // for (var i=0; i<dannyArr.length; i++) {
+         //   console.log(dannyArr[i]);
+         //   if (dannyArr[i] == emailUser) {
+         //    i = dannyArr.length;
+         //    console.log("email found");
+         //    access = true;
+         //  }
+         // }
+         //
+         // if (access == true) {
+         //   console.log("ACCESS GRANTED");
+         //   document.getElementById('lol').innerHTML = "ACCESS GRANTED";
+         // } else {
+         //   console.log("ACCESS DENIED");
+         //   document.getElementById('lol').innerHTML = "ACCESS DENIED";
+         // }
 
+
+
+
+
+           // 2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+           var userResult = Math.floor((Math.random() * 6) + 1);
+           var pcResult = Math.floor((Math.random() * 6) + 1);
+
+           if (pcResult > userResult) {
+             console.log("PC WINS");
+             document.getElementById("fulmicotone").innerHTML = "HAI PERSO CAPRA! " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
+           } else if (pcResult < userResult) {
+             console.log("USER WINS");
+             document.getElementById("fulmicotone").innerHTML = "hai vinto... (solo fortuna). " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
+           } else if (pcResult == userResult) {
+             console.log("DRAW");
+             document.getElementById("fulmicotone").innerHTML = "Parità. " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
+           }
+
+           console.log("User result = " + userResult + " Pc result = " + pcResult);
+           document.getElementById("lol").innerHTML = userResult;
+           document.getElementById("lallero").innerHTML = pcResult;
 
   </script>
   </body>
