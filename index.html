@@ -109,13 +109,14 @@
     // ----------------------------EXERCISE 3 ----------------------------------
 
     // stampare un elemento ogni 2
-      var arr = [ "Danny", "Brogno", "Buffy", "the cat", "Diego", "Alatriste", "William", "Wallace", "Publio", "Cornelio", "Scipione" ];
-      for (var i=0;i<arr.length;i++) {
-
-      if (i % 2 == 0) {
-        console.log(arr[i]);
-        }
-      }
+      // var arr = [ "Danny", "Brogno", "Buffy", "the cat", "Diego", "Alatriste", "William", "Wallace", "Publio", "Cornelio", "Scipione" ];
+      // for (var i=0;i<arr.length;i++) {
+      //
+      // if (i % 2 == 0) {
+      //   console.log(arr[i]);
+      //   document.getElementById('lol').innerHTML = (arr[i]);
+      //   }
+      // }
 
       // -----------------------------------------------------------------------
 
@@ -128,8 +129,29 @@
 
       // ---------------------------------EXERCISE 4----------------------------
 
+      // stampare tutte le parole con lunghezza pari
+        var dannyArr = [ 'Danny', 'Brogno', 'Buffy', 'thecat', 'Diego', 'Alatriste', "Caio", "Giulio", "Cesare" ];
+        for (var i=0;i<dannyArr.length;i++) {
+        var elem = dannyArr[i];
+        var lng = elem.length;
+        if (lng % 2 == 0) {
+          console.log(elem);
+          document.getElementById('lol').innerHTML = elem;
+          }
+        }
+
+        // ---------------------------------------------------------------------
 
 
+
+
+
+
+
+
+
+
+        // ------------------EXERCISE 5-----------------------------------------
 
 
 
