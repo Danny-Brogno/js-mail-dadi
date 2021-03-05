@@ -177,44 +177,43 @@
          for (var i=0; i<dannyArr.length; i++) {
            console.log(dannyArr[i]);
            if (dannyArr[i] == emailUser) {
-            // i = dannyArr.length;
+            // i = dannyArr.length;vedi linea 194
             console.log("email found");
             access = true;
             break;
           }
          }
-         //
-         // if (access == true) {
-         //   console.log("ACCESS GRANTED");
-         //   document.getElementById('lol').innerHTML = "ACCESS GRANTED";
-         // } else {
-         //   console.log("ACCESS DENIED");
-         //   document.getElementById('lol').innerHTML = "ACCESS DENIED";
-         // }
+         if (access == true) {
+           console.log("ACCESS GRANTED");
+           document.getElementById('lol').innerHTML = "ACCESS GRANTED";
+         } else {
+           console.log("ACCESS DENIED");
+           document.getElementById('lol').innerHTML = "ACCESS DENIED";
+         }
 
-         // LINEA 181 Questo non si usa tendenzialmente in quanto sfaso l'indice (detto a lezione il 05/03/2021 da Giovanni Cappelletti)
+         // LINEA 180 Questo non si usa tendenzialmente in quanto sfaso l'indice (detto a lezione il 05/03/2021 da Giovanni Cappelletti)
 
 
 
            // 2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-           var userResult = Math.floor((Math.random() * 6) + 1);
-           var pcResult = Math.floor((Math.random() * 6) + 1);
-
-           if (pcResult > userResult) {
-             console.log("PC WINS");
-             document.getElementById("fulmicotone").innerHTML = "HAI PERSO CAPRA! " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
-           } else if (pcResult < userResult) {
-             console.log("USER WINS");
-             document.getElementById("fulmicotone").innerHTML = "hai vinto... (solo fortuna). " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
-           } else if (pcResult == userResult) {
-             console.log("DRAW");
-             document.getElementById("fulmicotone").innerHTML = "Parità. " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
-           }
-
-           console.log("User result = " + userResult + " Pc result = " + pcResult);
-           document.getElementById("lol").innerHTML = userResult;
-           document.getElementById("lallero").innerHTML = pcResult;
+           // var userResult = Math.floor((Math.random() * 6) + 1);
+           // var pcResult = Math.floor((Math.random() * 6) + 1);
+           //
+           // if (pcResult > userResult) {
+           //   console.log("PC WINS");
+           //   document.getElementById("fulmicotone").innerHTML = "HAI PERSO CAPRA! " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
+           // } else if (pcResult < userResult) {
+           //   console.log("USER WINS");
+           //   document.getElementById("fulmicotone").innerHTML = "hai vinto... (solo fortuna). " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
+           // } else if (pcResult == userResult) {
+           //   console.log("DRAW");
+           //   document.getElementById("fulmicotone").innerHTML = "Parità. " + "Il tuo risultato è  "  + userResult + "." + " Il mio risultato è  "  + pcResult + ".";
+           // }
+           //
+           // console.log("User result = " + userResult + " Pc result = " + pcResult);
+           // document.getElementById("lol").innerHTML = userResult;
+           // document.getElementById("lallero").innerHTML = pcResult;
 
   </script>
   </body>
