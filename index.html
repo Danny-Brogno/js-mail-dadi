@@ -171,19 +171,18 @@
 
         // 1 - Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato
 
-        // Questo non s usa tendenzialmente in quanto sfaso l'indice
-         // var emailUser = prompt("Write here your email.");
-         // var dannyArr = [ "ciao@gmail.com", "lol@gmail.com", "lallero@gmail.com", "buffy@gmail.com" ];
-         // var access = false;
-         // for (var i=0; i<dannyArr.length; i++) {
-         //   console.log(dannyArr[i]);
-         //   if (dannyArr[i] == emailUser) {
-         //    // i = dannyArr.length;
-         //    console.log("email found");
-         //    access = true;
-         //    break;
-         //  }
-         // }
+         var emailUser = prompt("Write here your email.");
+         var dannyArr = [ "ciao@gmail.com", "lol@gmail.com", "lallero@gmail.com", "buffy@gmail.com" ];
+         var access = false;
+         for (var i=0; i<dannyArr.length; i++) {
+           console.log(dannyArr[i]);
+           if (dannyArr[i] == emailUser) {
+            // i = dannyArr.length;
+            console.log("email found");
+            access = true;
+            break;
+          }
+         }
          //
          // if (access == true) {
          //   console.log("ACCESS GRANTED");
